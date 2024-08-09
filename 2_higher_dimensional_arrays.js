@@ -1,7 +1,34 @@
 function solution(arr, row, col) {
   // your code here
   return "hello world"
+  // Access the 2D array at the specified row
+  const selectedRow = arr[row];
+  
+  // Access the 1D array at the specified column within the selected row
+  const selectedColumn = selectedRow[col];
+  
+  // Calculate the sum of all elements in the 1D array
+  const sum = selectedColumn.reduce((acc, val) => acc + val, 0);
+  
+  return sum;
 }
+
+// Example usage:
+const arr = [
+  [
+    [1, 2, 3, 4, 0, 6],
+    [7, 0, -9, 10, 11, 12],
+    [0, 14, 15, 16, 17, 18],
+  ],
+  [
+    [0, 1, 23, 17, 29, 13],
+    [1, -2, 3, 4, 5, -6],
+    [7, 0, 9, 8, 6, 1],
+  ]
+];
+
+console.log(solution(arr, 1, 2)); // Output: 31
+
 
 // 3D Array - Depth Sum
 
